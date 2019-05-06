@@ -39,13 +39,13 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
+const customImg = document.querySelector('#cta-img');
+const fi = customImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
-const logo = document.getElementById("logo-img");
-logo.setAttribute("src", "./../img/logo.png");
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
-const firstimg = document.getElementById('cta-img'); 
-firstimg.setAttribute("src", "./../img/header-img.png"); 
 
 const nav0 = document.getElementsByTagName("a")[0].innerHTML=`${siteContent.nav["nav-item-6"]}`;
 const nav1 = document.getElementsByTagName("a")[1].innerHTML=`${siteContent.nav["nav-item-1"]}`;
@@ -84,10 +84,26 @@ const nav7Green = document.getElementsByTagName("a")[6].style.color="green"
 const nav8Green = document.getElementsByTagName("a")[7].style.color="green"
 
 
+const h1 = siteContent["cta"]["h1"]
+
+const arr = h1.substring(0,4)
+
+const arr1 = h1.substring(4,6)
+
+const arr2 = h1.substring(6,15)
+
+
+const header1= document.getElementsByTagName("h1")[0].innerHTML=`${arr} <br /> ${arr1} <br /> ${arr2}`;
+
+
+
+
 const header = document.getElementsByTagName("h1")[0].innerHTML =`${siteContent.cta.h1}`
 const button = document.getElementsByTagName("button")[0].innerHTML =`${siteContent.cta.button}`
-const imgsrc = document.getElementById("middle-img")
-imgsrc.src = "./../img/mid-page-accent.jpg"
+
+
+const middle = document.getElementsByTagName("img")[2]
+middle.src = `${siteContent["main-content"]["middle-img-src"]}`
 
 const feat = document.getElementsByTagName("h4")[0].innerHTML=`${siteContent["main-content"]["features-h4"]}`;
 const feat1 = document.getElementsByTagName("h4")[1].innerHTML =`${siteContent["main-content"]["about-h4"]}`;
